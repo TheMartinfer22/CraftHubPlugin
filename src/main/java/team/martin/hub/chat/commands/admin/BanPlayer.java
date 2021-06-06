@@ -7,14 +7,10 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-import team.martin.hub.Main;
 import team.martin.hub.utils.MessagesUtils;
 import team.martin.hub.utils.PermissionsUtils;
 
-import java.sql.Date;
 import java.util.Optional;
-import java.util.UUID;
 
 import static org.bukkit.Bukkit.getBanList;
 
@@ -31,8 +27,8 @@ public class BanPlayer implements CommandExecutor {
 
             OfflinePlayer p = Bukkit.getServer().getOfflinePlayer(args[0]);
 
-            if (p.getPlayer().isBanned()){
-                sender.sendMessage(MessagesUtils.hasBanned);
+            if (p.getPlayer() == null){
+                sender.sendMessage(MessagesUtils.notFound);
                 return true;
             }
 

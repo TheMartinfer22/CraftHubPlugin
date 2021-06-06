@@ -10,7 +10,9 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new ChatTags(), this);
+
         getCommand("ban").setExecutor(new BanPlayer());
+
     }
 
     @Override
