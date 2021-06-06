@@ -25,14 +25,14 @@ public class BanPlayer implements CommandExecutor {
                 return false;
             }
 
-            Optional.of(args[0]).ifPresent(action-> {
-                getBanList(BanList.Type.NAME).addBan(args[0], MessagesUtils.banPlayerReason, null, sender.getName());
-                sender.sendMessage(MessagesUtils.prefix + ChatColor.GREEN + "Você baniu o jogador " + args[0] + " com sucesso!");
-                OfflinePlayer p = Bukkit.getOfflinePlayer(args[0]);
-                if (p.isOnline()){
-                    p.getPlayer().kickPlayer(MessagesUtils.banPlayerReason);
-                }
-            });
+            getBanList(BanList.Type.NAME).addBan(args[0], MessagesUtils.banPlayerReason, null, sender.getName());
+            sender.sendMessage(MessagesUtils.prefix + ChatColor.GREEN + "Você baniu o jogador " + args[0] + " com sucesso!");
+            OfflinePlayer p = Bukkit.getOfflinePlayer(args[0]);
+
+            if (p.isOnline()){
+                p.getPlayer().kickPlayer(MessagesUtils.banPlayerReason);
+            }
+
             return true;
 
         } else {
