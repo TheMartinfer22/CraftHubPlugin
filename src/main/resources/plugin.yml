@@ -6,4 +6,6 @@ authors: [ Martinfer22 ]
 description: Um plugin próprio para o servidor da Hub Tech.
 commands:
   ban:
+  kick:
+  unban:
 
