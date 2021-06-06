@@ -1,25 +1,25 @@
 package team.martin.hub;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import team.martin.hub.chat.ChatTags;
-import team.martin.hub.chat.commands.admin.BanPlayer;
+import team.martin.hub.management.Commands;
+import team.martin.hub.management.Events;
+import team.martin.hub.utils.MessagesUtils;
 
-
-public final class Main extends JavaPlugin {
+public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new ChatTags(), this);
-
-        getCommand("ban").setExecutor(new BanPlayer());
-
+        new Commands();
+        new Events();
+        System.out.println(MessagesUtils.logo);
+        System.out.println(MessagesUtils.startup);
     }
 
     @Override
     public void onDisable() {
+        System.out.println(MessagesUtils.logo);
+        System.out.println(MessagesUtils.shutdown);
     }
 
-    public static Main getInstance(){
-        return getPlugin(Main.class);
-    }
+    public static Main getInstance(){return getPlugin(Main.class); }
 }
