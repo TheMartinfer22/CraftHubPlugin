@@ -12,7 +12,6 @@ public class AdminCommands implements CommandExecutor {
 
         Player p = Bukkit.getServer().getPlayer(args[0]);
 
-        if ()
         p.kickPlayer(args[1]);
 
 
