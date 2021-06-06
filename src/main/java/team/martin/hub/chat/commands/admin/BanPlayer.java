@@ -22,14 +22,14 @@ public class BanPlayer implements CommandExecutor {
 
             if (args.length < 1) {
                 sender.sendMessage(MessagesUtils.banPlayerIncomplete);
-                return true;
+                return false;
             }
 
             OfflinePlayer p = Bukkit.getServer().getOfflinePlayer(args[0]);
 
             if (p.getPlayer() == null){
                 sender.sendMessage(MessagesUtils.notFound);
-                return true;
+                return false;
             }
 
             Optional.of(args[0]).ifPresent(action-> {
@@ -37,11 +37,11 @@ public class BanPlayer implements CommandExecutor {
                 sender.sendMessage(MessagesUtils.prefix + ChatColor.GREEN + "Você baniu o jogador " + p.getName() + " com sucesso!");
                 p.getPlayer().kickPlayer(MessagesUtils.banPlayerReason);
             });
-            return false;
+            return true;
 
         } else {
             sender.sendMessage(MessagesUtils.noPermission);
         }
-        return true;
+        return false;
     }
 }
