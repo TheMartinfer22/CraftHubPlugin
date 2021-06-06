@@ -11,7 +11,7 @@ public class ChatTags implements Listener {
 
     @EventHandler
     public void onPlayerChat(AsyncPlayerChatEvent event) {
-        if (event.getPlayer().hasPermission(PermissionsUtils.STAFF.getPermission())){
+        if (event.getPlayer().hasPermission(PermissionsUtils.STAFF)){
             event.setFormat(ChatColor.RED + "[Staff] " + ChatColor.RESET + event.getPlayer().getName() + ": " + event.getMessage());
             return;
         } else {
