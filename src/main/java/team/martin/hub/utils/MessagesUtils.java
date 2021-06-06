@@ -2,14 +2,14 @@ package team.martin.hub.utils;
 
 import org.bukkit.ChatColor;
 
-public class MessagesUtils {
+public interface MessagesUtils {
+    String prefix = ChatColor.DARK_PURPLE + "[HubCraft] ";
+    String noPermission = prefix + ChatColor.RED + "Você não possui permissão para executar esse comando.";
+    String hasBanned = prefix + ChatColor.RED + "O jogador que você mencionou já está banido.";
 
-    public static String prefix = ChatColor.DARK_PURPLE + "[Hub] ";
-    public static String noPermission = prefix + ChatColor.RED + "Você não possui permissão para executar esse comando.";
+    String banPlayerIncomplete = prefix + ChatColor.RED + "Para banir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /ban jogador";
+    String banPlayerReason = ChatColor.RED + "\nVocê foi banido do servidor por má conduta.\n Entre em nosso Discord, http://ahub.tech/discord";
 
-    public static String banPlayerIncomplete = prefix + ChatColor.RED + "Para banir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /ban jogador";
-    public static String banPlayerReason = ChatColor.RED + "Você foi banido do servidor por má conduta.\n Entre em nosso Discord, http://ahub.tech/discord";
-
-    public static String kickPlayerIncomplete = prefix + ChatColor.RED + "";
-    public static String unbanPlayerIncomplete = prefix + ChatColor.RED + "";
+    String kickPlayerIncomplete = prefix + ChatColor.RED + "Para kickar um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /kick jogador";
+    String unbanPlayerIncomplete = prefix + ChatColor.RED + "Para desbanir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /unban jogador";
 }
