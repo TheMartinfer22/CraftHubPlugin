@@ -30,4 +30,5 @@ public interface MessagesUtils {
 
     String kickPlayerIncomplete = prefix + ChatColor.RED + "Para kickar um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /kick jogador motivo";
     String unbanPlayerIncomplete = prefix + ChatColor.RED + "Para desbanir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /unban jogador";
+    String notFoundUnban = prefix + ChatColor.RED + "O jogador que foi mencionado não está banido!";
 }
