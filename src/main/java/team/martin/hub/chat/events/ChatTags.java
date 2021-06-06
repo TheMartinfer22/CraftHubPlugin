@@ -1,4 +1,4 @@
-package team.martin.hub.chat;
+package team.martin.hub.chat.events;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
@@ -13,10 +13,8 @@ public class ChatTags implements Listener {
     public void onPlayerChat(AsyncPlayerChatEvent event) {
         if (event.getPlayer().hasPermission(PermissionsUtils.STAFF)){
             event.setFormat(ChatColor.RED + "[Staff] " + ChatColor.RESET + event.getPlayer().getName() + ": " + event.getMessage());
-            return;
         } else {
             event.setFormat(ChatColor.GREEN + "[Hubble] " + ChatColor.RESET + event.getPlayer().getName() + ": " + event.getMessage());
         }
-
     }
 }
