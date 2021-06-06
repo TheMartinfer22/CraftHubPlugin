@@ -30,10 +30,8 @@ public class KickPlayer implements CommandExecutor {
                 return false;
             }
 
-            Optional.of(args[1]).ifPresent(action-> {
-                sender.sendMessage(MessagesUtils.prefix + ChatColor.GREEN + "Você kickou o jogador " + p.getName() + " com sucesso!");
-                p.getPlayer().kickPlayer(args[1]);
-            });
+            sender.sendMessage(MessagesUtils.prefix + ChatColor.GREEN + "Você kickou o jogador " + p.getName() + " com sucesso!");
+            p.getPlayer().kickPlayer(args[1]);
             return true;
 
         } else {
