@@ -1,0 +1,8 @@
+name: Team.martin.hub
+version: ${project.version}
+main: team.martin.hub.Main
+api-version: 1.16
+authors: [ Martinfer22 ]
+description: Um plugin próprio para o servidor da Hub Tech.
+commands:
+  kickass:
