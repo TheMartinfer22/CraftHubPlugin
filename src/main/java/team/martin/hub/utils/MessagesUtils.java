@@ -17,7 +17,7 @@ public interface MessagesUtils {
     String shutdown = ChatColor.RED + "O plugin foi encerrado com sucesso.";
 
     //JoinMessages
-    String onJoin = System.lineSeparator() + ChatColor.GREEN + "Olá, seja muito bem-vindo(a) ao servidor da Hub." + System.lineSeparator();
+    String onJoin = System.lineSeparator() + ChatColor.GREEN + "Olá, seja muito bem-vindo(a) ao servidor da Hub.";
 
     //MainSettings
     String prefix = ChatColor.LIGHT_PURPLE + "[HubCraft] ";
