@@ -3,23 +3,17 @@ package team.martin.hub.utils;
 import org.bukkit.ChatColor;
 
 public interface MessagesUtils {
-    /*
-     * O plugin foi pensado em inicialização para usuários do Linux,
-     * caso o sistema foi Windows, deverá alterar o "\n".
-     * Para não poluir o código foi deixado como padrão.
-     */
-
     //MainGetters
     String logo = ChatColor.LIGHT_PURPLE +
-            "'##::::'##:'##::::'##:'########::\n" + ChatColor.LIGHT_PURPLE +
-            " ##:::: ##: ##:::: ##: ##.... ##:\n" + ChatColor.LIGHT_PURPLE +
-            " ##:::: ##: ##:::: ##: ##:::: ##:\n" + ChatColor.LIGHT_PURPLE +
-            " #########: ##:::: ##: ########::\n" + ChatColor.LIGHT_PURPLE +
-            " ##.... ##: ##:::: ##: ##.... ##:\n" + ChatColor.LIGHT_PURPLE +
-            " ##:::: ##: ##:::: ##: ##:::: ##:\n" + ChatColor.LIGHT_PURPLE +
-            " ##:::: ##:. #######:: ########::\n" + ChatColor.LIGHT_PURPLE +
+            "'##::::'##:'##::::'##:'########::" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " ##:::: ##: ##:::: ##: ##.... ##:" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " ##:::: ##: ##:::: ##: ##:::: ##:" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " #########: ##:::: ##: ########::" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " ##.... ##: ##:::: ##: ##.... ##:" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " ##:::: ##: ##:::: ##: ##:::: ##:" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
+            " ##:::: ##:. #######:: ########::" + System.lineSeparator() +  ChatColor.LIGHT_PURPLE +
             "..:::::..:::.......:::........:::";
-    String startup = ChatColor.GREEN + "O plugin da Hub foi inicializado com sucesso, qualquer erro abrir issue em \n" + ChatColor.GREEN + "https://github.com/TheMartinfer22/CraftHubPlugin";
+    String startup = ChatColor.GREEN + "O plugin da Hub foi inicializado com sucesso, qualquer erro abrir issue em " + System.lineSeparator() + ChatColor.GREEN + "https://github.com/TheMartinfer22/CraftHubPlugin";
     String shutdown = ChatColor.RED + "O plugin foi encerrado com sucesso.";
 
     //JoinMessages
@@ -32,7 +26,7 @@ public interface MessagesUtils {
 
     //Ban Command
     String banPlayerIncomplete = prefix + ChatColor.RED + "Para banir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /ban jogador";
-    String banPlayerReason = ChatColor.RED + "\nVocê foi banido do servidor por má conduta.\n Entre em nosso Discord, http://ahub.tech/discord";
+    String banPlayerReason = ChatColor.RED + System.lineSeparator() + "Você foi banido do servidor por má conduta." + System.lineSeparator() + "Entre em nosso Discord, http://ahub.tech/discord";
 
     //Kick Command
     String kickPlayerIncomplete = prefix + ChatColor.RED + "Para kickar um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /kick jogador motivo";
