@@ -22,6 +22,9 @@ public interface MessagesUtils {
     String startup = ChatColor.GREEN + "O plugin da Hub foi inicializado com sucesso, qualquer erro abrir issue em \n" + ChatColor.GREEN + "https://github.com/TheMartinfer22/CraftHubPlugin";
     String shutdown = ChatColor.RED + "O plugin foi encerrado com sucesso.";
 
+    //JoinMessages
+    String onJoin = ChatColor.GREEN + "Olá, seja muito bem-vindo(a) ao servidor da Hub.";
+
     //MainSettings
     String prefix = ChatColor.LIGHT_PURPLE + "[HubCraft] ";
     String noPermission = prefix + ChatColor.RED + "Você não possui permissão para executar esse comando.";
