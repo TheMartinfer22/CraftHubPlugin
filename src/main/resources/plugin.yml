@@ -8,4 +8,5 @@ commands:
   ban:
   kick:
   unban:
+  lag:
 
