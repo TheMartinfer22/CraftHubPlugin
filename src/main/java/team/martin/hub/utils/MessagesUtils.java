@@ -34,4 +34,11 @@ public interface MessagesUtils {
     //Unban Command
     String unbanPlayerIncomplete = prefix + ChatColor.RED + "Para desbanir um jogador você deve utilizar no formato:" + ChatColor.GOLD + " /unban jogador";
     String notFoundUnban = prefix + ChatColor.RED + "O jogador que foi mencionado não está banido!";
+
+    //LagClear Command
+    String prefixClearLag = ChatColor.LIGHT_PURPLE + "[HubClear] ";
+    String msg1ClearLag = prefixClearLag + ChatColor.RED + "O chão vai limpar em {t_int} segundos, prepare-se para pegar os itens do chão!!!";
+    String msg2ClearLag = prefixClearLag + ChatColor.RED + "Foram excluídos todos os itens do chão!";
+
+
 }

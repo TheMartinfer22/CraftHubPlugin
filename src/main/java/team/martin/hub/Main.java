@@ -14,7 +14,6 @@ public class Main extends JavaPlugin {
         System.out.println(MessagesUtils.logo);
         System.out.println(MessagesUtils.startup);
     }
-
     @Override
     public void onDisable() {
         System.out.println(MessagesUtils.logo);
